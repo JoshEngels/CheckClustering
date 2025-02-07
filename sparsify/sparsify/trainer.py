@@ -289,7 +289,7 @@ class SaeTrainer:
 
                 # print(outputs)
 
-                # torch.save(outputs, f"{save_dir}/embeddings_{i}.pt")
+                torch.save(outputs, f"{save_dir}/pythia_embeddings_{i}.pt")
                 # i += 1
 
                 # Make sure the W_dec is still unit-norm if we're autoencoding
