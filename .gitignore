@@ -1,3 +1,4 @@
 test
 wandb
 sae-ckpts
+*.pt

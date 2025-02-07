@@ -25,7 +25,7 @@ gpt = AutoModelForCausalLM.from_pretrained(
 )
 
 cfg = TrainConfig(
-    SaeConfig(expansion_factor=8, k=4), 
+    SaeConfig(expansion_factor=8, k=16), 
     batch_size=16,
     layers=[4]
 )

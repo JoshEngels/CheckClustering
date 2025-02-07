@@ -235,7 +235,7 @@ class SaeTrainer:
                 input_dict[name] = inputs.flatten(0, 1)
 
         i = 0
-        save_dir = "/mnt/sdb/jengels/gpt2_embeddings"
+        save_dir = "/mnt/sdb/jengels/pythia_embeddings"
         os.makedirs(save_dir, exist_ok=True)
         for batch in dl:
             input_dict.clear()
@@ -289,8 +289,8 @@ class SaeTrainer:
 
                 # print(outputs)
 
-                torch.save(outputs, f"{save_dir}/pythia_embeddings_{i}.pt")
-                # i += 1
+                torch.save(outputs, f"{save_dir}/embeddings_{i}.pt")
+                i += 1
 
                 # Make sure the W_dec is still unit-norm if we're autoencoding
                 if raw.cfg.normalize_decoder and not self.cfg.transcode:
